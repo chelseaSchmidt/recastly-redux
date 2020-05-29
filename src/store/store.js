@@ -7,5 +7,3 @@ import exampleVideoData from '../data/exampleVideoData.js';
 
 // call createStore with reducers
 const store = createStore(rootReducer, applyMiddleware(thunk));
-
-

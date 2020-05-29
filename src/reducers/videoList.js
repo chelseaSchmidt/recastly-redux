@@ -8,15 +8,13 @@ import {CHANGE_VIDEO_LIST} from '../actions/videoList.js';
 //E : no action or wrong action (return state)
 //Ex: take the state and the action, do a modification described by the action
 //    and return new state
-var videoListReducer = (state = sampleData, action) => {
+var videoListReducer = (state = [], {type, videos}) => {
   //TODO: define a reducer for the videoList field of our state.
   //switch on action.type
-  switch(action.type) {
+  switch(type) {
     //case: action.type is CHANGE_VIDEO_LIST
     case CHANGE_VIDEO_LIST:
-      //create a new state with contents of old state
-      const newState = {...state, videos: action.videos};
-      return newState;
+      return videos;
     //default:
     default:
       //return state that was passed in
